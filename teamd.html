@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>TECHFEST 2018||A Developer's Haven</title>
@@ -10,16 +9,45 @@
     <meta name="keywords" content="technical fest, techfest, HMR, HMRITM, Vishesh Mohey,Delhi, projects,doomedtodie,New delhi,robo soccer,robotics,coding,hmr,Tech" />
     <meta name="author" content="Vishesh Mohey(Doomedtodie)" />
     <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="https://use.typekit.net/zjs0dpp.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/zjs0dpp.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fwp5ddc.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/baset.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/glitch.css" />
-    <script src="js/snap.svg-min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/baraja.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
     <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this Site in a modern browser for best experience.");</script>
 </head>
+<body class="loading">
+<h1 class="content__title thead">TEAM</h1>
+<div class="container">
+<section class="main">
 
-<body class ="demo-2 loading">
+    <nav class="actions">
+
+        <span id="nav-fanOther2">View All</span>
+        <span id="nav-fanOther3">View ALL</span>
+    </nav>
+
+    <div class="baraja-demo">
+        <ul id="baraja-el" class="baraja-container">
+            <li><img src="images/" alt="Person1"/><h4>NAME</h4><p>JOB<br>NO.<br>Class</p></li>
+            <li><img src="images/" alt="Person2"/><h4>NAME</h4><p>JOB<br>NO.<br>Class</p></li>
+            <li><img src="images/" alt="Person3"/><h4>NAME</h4><p>JOB<br>NO.<br>Class</p></li>
+            <li><img src="images/" alt="Person4"/><h4>NAME</h4><p>JOB<br>NO.<br>Class</p></li>
+            <li><img src="images/" alt="Person5"/><h4>NAME</h4><p>JOB<br>NO.<br>Class</p></li>
+            <li><img src="images/" alt="Person6"/><h4>NAME</h4><p>JOB<br>NO.<br>Class</p></li>
+            <li><img src="images/" alt="Person7"/><h4>NAME</h4><p>JOB<br>NO.<br>Class</p></li>
+        </ul>
+    </div>
+    <nav class="actions light">
+        <span id="nav-prev">&lt;</span>
+        <span id="nav-next">&gt;</span>
+    </nav>
+</section>
 <svg class="hidden">
     <symbol id="icon-menu" viewBox="0 0 119 25">
         <title>menu</title>
@@ -30,18 +58,6 @@
         <path d="M24 1.485L22.515 0 12 10.515 1.485 0 0 1.485 10.515 12 0 22.515 1.485 24 12 13.484 22.515 24 24 22.515 13.484 12z"/>
     </symbol>
 </svg>
-    <div class="content">
-
-        <div class="glitch">
-            <div class="glitch__img"></div>
-            <div class="glitch__img"></div>
-            <div class="glitch__img"></div>
-            <div class="glitch__img"></div>
-            <div class="glitch__img"></div>
-        </div>
-        <h2 class="content__title thead">Team</h2>
-        <h2 class="content__title comingsoon">Coming soon..</h2>
-    </div>
 <nav class="menu">
     <div class="menu__item menu__item--1" data-direction="bt">
         <div class="menu__item-inner">
@@ -95,13 +111,61 @@
     <button class="action action--menu"><svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg></button>
     <button class="action action--close"><svg class="icon icon--close"><use xlink:href="#icon-close"></use></svg></button>
 </nav>
+
 <script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/charming.min.js"></script>
 <script src="js/TweenMax.min.js"></script>
-<script src="js/demog.js"></script>
-<script>
-    window.onbeforeunload = function () {
+<script src="js/demo1.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.baraja.js"></script>
+<script>window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }</script>
+<script type="text/javascript">
+    $(function() {
+
+        var $el = $( '#baraja-el' ),
+            baraja = $el.baraja();
+
+        // navigation
+        $( '#nav-prev' ).on( 'click', function( event ) {
+
+            baraja.previous();
+
+        } );
+
+        $( '#nav-next' ).on( 'click', function( event ) {
+
+            baraja.next();
+
+        } );
+        $( '#nav-fanOther2' ).on( 'click', function( event ) {
+
+            baraja.fan( {
+                speed : 500,
+                easing : 'ease-out',
+                range : 360,
+                direction : 'left',
+                origin : { x : 50, y : 90 },
+                center : false
+            } );
+
+        } );
+
+        $( '#nav-fanOther3' ).on( 'click', function( event ) {
+
+            baraja.fan( {
+                speed : 500,
+                easing : 'ease-out',
+                range : 330,
+                direction : 'left',
+                origin : { x : 50, y : 100 },
+                center : true
+            } );
+
+        } );
+
+
+    });
+</script>
 </body>
 </html>

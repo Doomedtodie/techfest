@@ -945,30 +945,31 @@ a:focus {
 	padding: 0 0.5rem;
 }
 @media screen and (max-width: 1000px)  {
+
 	.shead {
 		font-size: 45px;
 		position: relative;
-		bottom: 240px;
-		left: 0;
+		bottom: 170px;
+		left: -20px;
 
 	}
 	.thead{
 		position: relative;
-		bottom: 240px;
-		left:0;
+		bottom: 200px;
+		left:-10px;
 		font-size: 45px;
 	}
 	.comingsoon{
-		font-size: 50px;
+		font-size: 40px;
 		position: relative;
-		bottom: 900px;
-		left: 11vw;
+		bottom: 850px;
+		left: 0vw;
 	}
 	.comingsoon2{
-		font-size: 50px;
+		font-size: 40px;
 		position: relative;
-		bottom: 900px;
-		left: 10vw;
+		bottom: 850px;
+		left: 0vw;
 	}
 }
 

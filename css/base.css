@@ -362,6 +362,7 @@ main {
 	cursor: default;
 }
 .content__title1 {
+	width:60%;
 	position: relative;
 	bottom: 50px;
 	mix-blend-mode: screen;
@@ -734,5 +735,26 @@ main {
 	}
 	.menu__item-inner:hover .menu__item-hoverlink {
 		opacity: 1;
+	}
+}
+@media screen and (max-width: 1000px){
+	.content__title1{
+		width: 100%;
+	}
+	.content__title{
+		font-size: 50px;
+		align-content: center;
+	}
+	.content {
+		position: relative;
+		top:50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+	}
+	.content__tagline{
+		font-size: 16px;
 	}
 }
